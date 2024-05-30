@@ -20,7 +20,7 @@ use App\Http\Controllers\WineController;
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('admin.home');
 });
 
 Route::get('/dashboard', function () {

@@ -39,7 +39,7 @@ class WineController extends Controller
      */
     public function show(Wine $wine)
     {
-        return view('admin.wines.show', compact('wines'));
+        return view('admin.wines.show', compact('wine'));
     }
 
     /**

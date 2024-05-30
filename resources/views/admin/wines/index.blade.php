@@ -1,3 +1,6 @@
+@extends('layouts.admin')
+
+@section('content')
 <h1>wines</h1>
 <table class="table">
     <thead>
@@ -24,6 +27,6 @@
             </td>
         </tr>
     @endforeach
-
+@endsection
 
 

@@ -1,4 +1,4 @@
-
+@extends('layouts.admin')
 @section('content')
 
     <div class="container">
@@ -7,9 +7,10 @@
         <p>{{ $wine->winery }}</p>
         <p>{{ $wine->vote }}</p>
         <p>{{ $wine->location }}</p>
+        <img src="{{ $wine->image }}" alt="img">
 
-
-        <a href="{{ route('admin.wines.show') }}">Back to projects</a>
+        <a href="{{ route('admin.wines.index') }}">Back to projects</a>
+        
     </div>
 
 @endsection
