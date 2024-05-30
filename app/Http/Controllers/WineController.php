@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Controllers;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Wine;
 use Illuminate\Http\Request;
+use App\Models\Wine;
 
 class WineController extends Controller
 {
@@ -15,7 +15,7 @@ class WineController extends Controller
     {
         $wines = Wine::all();
 
-        return view('wines.index', compact('wines'));
+        return view('admin.wines.index', compact('wines'));
     }
 
     /**
@@ -37,9 +37,9 @@ class WineController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Wine $wine)
     {
-        //
+        return view('admin.wines.show', compact('wines'));
     }
 
     /**

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\WineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +32,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::middleware(['auth', 'verified'])
+                ->prefix('admin')
+                ->name('admin.')
+                ->group(function(){
+                    // tutte le rotte protette da auth
+                    Route::get('/',[DashboardController::class, 'index'])->name('home');
+                    Route::resource('wines', WineController::class);
+                });
 
 require __DIR__.'/auth.php';

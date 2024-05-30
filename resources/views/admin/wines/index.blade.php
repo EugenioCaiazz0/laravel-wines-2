@@ -18,7 +18,7 @@
 
 
             <td>
-                <a href="{{ route('wines.index', $wine) }}" class="btn btn-success "> <i class="fa-solid fa-eye"></i> </a>
+                <a href="{{ route('admin.wines.show', $wine) }}" class="btn btn-success "> <i class="fa-solid fa-eye"></i> </a>
                 <a href="" class="btn btn-warning "> <i class="fa-solid fa-pencil"></i> </a>
                 <a href="" class="btn btn-danger "> <i class="fa-solid fa-trash"></i> </a>
             </td>

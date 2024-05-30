@@ -14,6 +14,7 @@
 
 
    <h1>home pubblica </h1>
+   <a href="{{route('admin.wines.index')}}">vai a bere</a>
 
 
 
