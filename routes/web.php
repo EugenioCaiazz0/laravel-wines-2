@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/wines', [WineController::class, 'index'])->name('wines.index');
+
+
 Route::get('/', function () {
     return view('home');
 });
